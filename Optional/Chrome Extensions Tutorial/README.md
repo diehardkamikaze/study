@@ -55,7 +55,7 @@ C помощью этого краткого примера «Hello Extension»,
     }
   }
 ```
-Скачайте [hello_extensions.png здесь](https://developer.chrome.com/static/images/index/hello_extensions.png) и затем создайте файл **hello.html**:
+Скачайте [hello_extensions.png здесь](https://developer.chrome.com/static/images/index/hello_extensions.png) и затем создайте файл **hello.html** с кодом:
 
 ```html
 	<html>
@@ -99,7 +99,7 @@ C помощью этого краткого примера «Hello Extension»,
 
  
 ### Что дальше?
- Следуйте к мануалу: [Руководство по началу работы]()
+ Следуйте к мануалу: [Руководство по началу работы](https://github.com/diehardkamikaze/study/blob/master/Optional/Chrome%20Extensions%20Tutorial/Get%20Started%20Tutorial/README.md)
  
  
  
