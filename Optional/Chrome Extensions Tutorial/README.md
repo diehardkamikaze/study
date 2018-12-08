@@ -2,7 +2,7 @@
 
 >Перевод руководства "Extend the Browser" от 06.12.2018
 
->[Оригинал](https://developer.chrome.com/extensions)
+>[Оригинал](https://developer.chrome.com/extensions) Content available under the [CC-By 3.0 license](http://creativecommons.org/licenses/by/3.0/)
 
 >Вообще для чего этот Elementary-level перевод? - Для себя, чтобы разобраться с расширениями и в дальнейшем обращаться к этой статье.
 
