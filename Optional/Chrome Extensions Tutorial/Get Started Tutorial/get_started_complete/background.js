@@ -36,4 +36,5 @@
             actions: [new chrome.declarativeContent.ShowPageAction()]
       }]);
     });
+	 
   });

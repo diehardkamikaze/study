@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "Background script test",
+  "version": "0.1",
+
+
+
+  "description": "Очередная хуйня подзалупная",
+ 
+ 
+// "page_action": {...},
+	"background": {
+    "scripts": ["background.js"],
+    "persistent": false
+    // Optional
+   
+	},
+
+  "author": "dolbaeb",
+ "permissions": [
+          "contextMenus",
+		  "tabs"
+        ]
+
+}
