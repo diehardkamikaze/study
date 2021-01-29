@@ -1,0 +1,121 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.advertising-welcome
+		.advertising-h1
+			font-size: 64px
+	.header-contacts
+		font-size: 14px
+	.owl-carousel .carousel-services-item
+		flex-direction: column
+
+	.s
+	&-gallery, &-review, &-partners
+		padding: 10% 0
+	&-call
+		background-size: cover
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.advertising-welcome
+		.advertising-h1
+			font-size: 48px
+	.s-call
+		&::before
+			width: 100%
+		.callback
+			padding: 12% 0
+	
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.header-contacts
+		.phone-special
+			text-align: left
+	.advertising-welcome
+		.advertising-h1
+			font-size: 45px
+	.button
+		padding: 12px 36px
+	.carousel-reviews
+		&::before, &::after
+			display: none
+
+	.carousel-partners
+		.owl-nav
+			> div.owl-prev
+				left: 0
+			> div.owl-next
+				right: 0
+	.s-partners
+		.accent-h2
+			margin: 0
+
+	.footer-column
+		margin: 20px 0
+	.social-footer
+		margin-top: 0
+		li a
+			margin-top: 0
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.advertising-welcome
+		.advertising-h1
+			font-size: 28px
+			margin-top: 5px
+		p
+			span
+				font-size: 9.5px
+		strong
+			margin-top: -15px
+			font-size: 13px
+	.header-composition
+		p
+			font-size: 14px
+	.header-contacts
+		.container
+			margin: 0
+		font-size: 13px
+	
+	.fotorama__arr
+		top: 20%
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.advertising-welcome
+		p
+			span
+				font-size: 8.5px
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

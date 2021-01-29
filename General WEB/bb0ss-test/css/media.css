@@ -1,0 +1,130 @@
+
+@media only screen and (max-width : 1200px)
+{
+    .s-approach
+    {
+    
+        background: url('../img/approach.jpg') no-repeat;
+        background-size: 50%;
+        background-origin: content-box;
+        background-position-x: 100%; 
+        background-position-y: 50%; 
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+{
+    .bboss-hamburger 
+    {
+        display: block;
+    }
+    .header-navigation .site-menu
+    {
+        display: none;
+    }
+    .container.header-navigation
+    {
+        padding-top: 15px;
+    }
+    .s-approach
+    {
+        background-size: 30%;
+        background-position-y: 0; 
+        background-clip: padding-box;
+    }
+    .s-approach .container
+    {
+        flex-wrap: wrap;
+    }
+    .s-approach .textcontent
+    {
+    padding-right: 0;
+    }
+    .col-60, .col-40
+    {
+        width: 100%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 840px)
+{
+    
+    .s-principles .container
+    {
+        flex-wrap: wrap;
+    }
+    .s-principles .textcontent
+    {
+    margin: 0px;
+    margin-bottom: 40px;
+    width: 100%;
+    }
+
+    .col-30
+    {
+        width: 100%;
+    }
+    .col-70
+    {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width : 700px)
+{
+    .s-approach
+    {
+        background-image: none;
+    }
+    .callback-board
+    {
+        background: linear-gradient(#00B4F0 0%, #00B4F0 50%, transparent 50%, transparent 100%);
+        margin-top: 40px;
+
+    }
+    .callback-board .arrow-key
+    {
+        display: none;
+
+    }
+    .col-50
+    {
+        width: 100%;
+    }
+
+
+    .s-result .container
+    {
+        background: url('../img/result.png') no-repeat;
+        background-size: 40%;
+        background-position-x: 100%; 
+        background-position-y: 0; 
+        min-height: 496px;
+        flex-wrap: wrap;
+    }
+    .s-result .textcontent
+    {
+        display: block;
+        
+        height: auto;
+        padding-left: 0px;
+    }   
+
+}
+@media only screen and (max-width : 480px)
+{
+    .h1
+    {
+        font-size: 60px;
+    }
+    .h2
+    {
+        font-size: 30px;
+    }
+    .triple-control span, .h3
+    {
+        font-size: 20px;
+    }
+}
+
