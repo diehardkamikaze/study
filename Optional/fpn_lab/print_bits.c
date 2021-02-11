@@ -35,7 +35,11 @@ void	print_fraction_hex(unsigned long long a, int nbits)
 
 void	print_fp(void *x, int w, int t)
 {
-	unsigned long long x_as_long = *((unsigned long long *)x);
+	unsigned long long x_as_long = 0;
+	if (w + t == 63)
+		x_as_long = *((unsigned long long *)x);
+	else
+		x_as_long = *((unsigned int *)x);
 	unsigned sign_bit = x_as_long >> (w + t);
 	unsigned exponent_bits = (x_as_long >> t) & ((1 << w) - 1);
 	unsigned long long mantissa_bits = x_as_long & (((long long int)1 << t) - 1);
@@ -82,7 +86,7 @@ void	print_fp(void *x, int w, int t)
 
 void print_double(double x)
 {
-	print_fp((void *)&x, 11 ,52);
+	print_fp((void *)&x, 11, 52);
 }
 
 void print_float(float x)
@@ -92,6 +96,29 @@ void print_float(float x)
 
 int main(void)
 {
-	printf("The maximum value of float = %.10e\n", FLT_MAX);
-	printf("The minimum value of float = %.10e\n", FLT_MIN);
+	int one = 1;
+	float FLOAT_SUBNORM_MIN = *((float *)&one);
+	printf("%.3f = \n", 0.125f);
+	print_float(0.125f);
+
+	printf("positive zero = %.1f = \n", 0.0f);
+	print_float(0.0f);
+	printf("\n");
+	printf("negative zero = %.1f = \n", -0.0f);
+	print_float(-0.0f);
+	printf("\n");
+	printf("min positive subnormal float value ~ %.10e = \n", FLOAT_SUBNORM_MIN);
+	print_float(FLOAT_SUBNORM_MIN);
+	printf("min positive normal float value = %.10e = \n", FLT_MIN);
+	print_float(FLT_MIN);
+	printf("max normal float value = %.10e = \n", FLT_MAX);
+	print_float(FLT_MAX);
+	printf("machine epsilon ~ %.10e = \n", FLT_EPSILON);
+	print_float(FLT_EPSILON);
+	printf("positive infinity = %f = \n", 1.0f/0.0f);
+	print_float(1.0f/0.0f);
+	printf("negative infinity = %f = \n", -1.0f/0.0f);
+	print_float(-1.0f/0.0f);
+	printf("quiet %f = \n", 0.0f/0.0f);
+	print_float(0.0f/0.0f);
 }
