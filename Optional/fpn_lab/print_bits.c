@@ -93,7 +93,7 @@ void print_float(float x)
 {
 	 print_fp((void*)&x, 8, 23);
 }
-
+/*
 int main(void)
 {
 	int one = 1;
@@ -121,4 +121,4 @@ int main(void)
 	print_float(-1.0f/0.0f);
 	printf("quiet %f = \n", 0.0f/0.0f);
 	print_float(0.0f/0.0f);
-}
+}*/
