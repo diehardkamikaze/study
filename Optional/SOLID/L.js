@@ -1,4 +1,4 @@
-// Liskov Substitution Principle
+/* // Liskov Substitution Principle
 
 class Person {
 
@@ -38,4 +38,42 @@ openSecretDoor(new Frontend());
 
 openSecretDoor(new Backend());
 
-// openSecretDoor(new PersonFromDiffCompany()); //here should be member
+// openSecretDoor(new PersonFromDiffCompany()); //here should be member */
+
+class Component {
+}
+
+class ComponentWithTemplate() {
+  render() {
+    return `<div>Component</div>`
+  }
+}
+
+class HeaderComponent extends Component {
+  onInit() { }
+}
+
+class FooterComponent extends Components {
+  afterInit() { }
+}
+
+function renderComponents(component) {
+  component.render();
+}
+
+class HOC extends Component {
+  render() {
+    throw new Error('Render is impossible here');
+  }
+
+  wrapComponent(components) {
+    component.wrapped = true;
+    return component;
+  }
+}
+
+renderComponents(new HeaderComponent());
+
+renderComponents(new FooterComponent());
+
+renderComponents(new HOC());
