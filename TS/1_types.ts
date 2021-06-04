@@ -46,3 +46,6 @@ const id1: ID = '1234';
 const id2: ID = 1234;
 
 type SomeType = string | null | undefined;
+
+let str2: boolean = false;
+str2 = null;
