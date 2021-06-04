@@ -41,19 +41,24 @@ openSecretDoor(new Backend());
 // openSecretDoor(new PersonFromDiffCompany()); //here should be member */
 
 class Component {
+  isComponent = true;
 }
 
-class ComponentWithTemplate() {
+class ComponentWithTemplate extends Component {
   render() {
     return `<div>Component</div>`
   }
 }
 
-class HeaderComponent extends Component {
+class HigherOrderComponent extends Component {
+
+}
+
+class HeaderComponent extends ComponentWithTemplate {
   onInit() { }
 }
 
-class FooterComponent extends Components {
+class FooterComponent extends ComponentWithTemplate {
   afterInit() { }
 }
 
@@ -61,7 +66,7 @@ function renderComponents(component) {
   component.render();
 }
 
-class HOC extends Component {
+class HOC extends HigherOrderComponent {
   render() {
     throw new Error('Render is impossible here');
   }
