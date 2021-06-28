@@ -1,0 +1,18 @@
+{
+  "name": "jest_try",
+  "version": "1.0.0",
+  "description": "intro to jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "keywords": [
+    "jest",
+    "tdd"
+  ],
+  "author": "da da ya",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
+}
