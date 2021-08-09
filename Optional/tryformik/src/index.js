@@ -59,7 +59,7 @@ const SignupForm = () => {
         value={formik.values.lastName}
       />
 	  {formik.touched.lastName && formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
-      <button type="submit" disabled={formik.isSubmitting ? 'true' : 'false'}>Submit</button>
+      <button type="submit" disabled={formik.isSubmitting}>Submit</button>
     </form>
 	}
 	</Formik>);
