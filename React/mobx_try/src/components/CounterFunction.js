@@ -1,11 +1,34 @@
-import React, {useState} from 'react';
-import { observer, useLocalObservable, Observer } from 'mobx-react';
+import React, {useState, useEffect} from 'react';
+import { observer} from 'mobx-react';
+import { runInAction } from 'mobx';
+import { counterStoreFunction } from '../stores';
 
+const store = counterStoreFunction();
+
+export const CounterFunction = observer(
+	({initialCount}) => {
+		useEffect(() => {
+			runInAction(() => store.counter = initialCount ?? 0);  
+		}, [initialCount]);
+		
+		return (
+			<div>
+				<button onClick={store.dec}>-</button>
+				<span style={{ color: store.color, fontWeight: 'bold' }}>{store.counter}</span>
+				<button onClick={store.inc}>+</button>
+			</div>
+		);
+	});
+
+/*
 export const CounterFunction = 
 	({initialCount}) => {
 
 		const store = useLocalObservable(() => { return  ({ 
 			counter: initialCount ?? 0, 
+			get color() {
+				return this.counter > 0 ? 'green' : this.counter < 0 ? 'red' : 'black';
+			},
 			inc() { this.counter++ },
 			dec() { this.counter-- },
 		
@@ -15,14 +38,14 @@ export const CounterFunction =
 			<div>
 				<button onClick={store.dec}>-</button>
 				<Observer>{() => (
-					<span>{store.counter}</span>
+					<span style={{ color: store.color, fontWeight: 'bold' }}>{store.counter}</span>
 				) }
 				</Observer>
 				<button onClick={store.inc}>+</button>
 			</div>
 		);
 	}
-
+*/
 
 /* import React, {useState} from 'react';
 
